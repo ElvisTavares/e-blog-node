@@ -1,10 +1,11 @@
 const express = require("express");
 const app = express();
 const PostController = require("./controllers/PostController");
+const cors = require('cors');
 
 
 app.use(express.json());
-
+app.use(cors())
 
 app.get("/home", (req, res) => {
     res.status(200).send("ola");
